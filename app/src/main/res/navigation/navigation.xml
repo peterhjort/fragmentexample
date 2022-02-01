@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentOne">
+
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:name="com.example.fragmentnavigationexample.FragmentOne"
+        android:label="FragmentOne" >
+        <action
+            android:id="@+id/action_fragmentOne_to_fragmentTwo"
+            app:destination="@id/fragmentTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTwo"
+        android:name="com.example.fragmentnavigationexample.FragmentTwo"
+        android:label="FragmentTwo" >
+        <argument
+            android:name="number1"
+            app:argType="integer" />
+        <argument
+            android:name="number2"
+            app:argType="integer" />
+        <argument
+            android:name="viesti"
+            app:argType="string"
+            android:defaultValue='"xxx"' />
+        <argument
+            android:name="number3"
+            app:argType="integer" />
+    </fragment>
+</navigation>
